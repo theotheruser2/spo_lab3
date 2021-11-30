@@ -6,6 +6,7 @@ static inline size_t dirent_len(struct dirent* dirent) {
     return sizeof(dirent->d_type) +
            sizeof(dirent->d_ino) +
            sizeof(dirent->d_reclen) +
+	   sizeof(dirent->d_off) +
 	   sizeof(strlen(dirent->d_name)) +
            strlen(dirent->d_name) + 1;
 }
